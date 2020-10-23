@@ -5,10 +5,7 @@ import cn.tycoding.entity.User;
 import cn.tycoding.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -75,6 +72,29 @@ public class LoginController {
             e.printStackTrace();
         }
         return new Result(false, "发生未知错误");
+    }
+
+
+    /**
+     * @Description: 验证用户名是否已经存在
+     * @Param:
+     * @return:
+     * @Author: 胡一文
+     * @Date: 2020/10/23
+     * @Time: 20:40
+     */
+    @ResponseBody
+    @RequestMapping(value = "/verifyUserName" ,method= RequestMethod.GET)
+    public Result verifyUserName(@RequestParam("username") String username) {
+        User byName = userService.findByName(username);
+        System.out.println(username);
+        System.out.println("--------------");
+        System.out.println(byName);
+        if (byName != null) {
+            return new Result(true,"用户已存在");
+        } else {
+            return new Result(false,"用户名可用");
+        }
     }
 
     /**
