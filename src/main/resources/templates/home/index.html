@@ -18,7 +18,7 @@
         <el-menu-item id="author" index="3">
             <img class="el-tooltip" th:src="@{../../image/3.png}" />
             <el-dropdown>
-                  <span class="el-dropdown-link">胡一文<i class="el-icon-arrow-down el-icon--right"></i></span>
+                  <span class="el-dropdown-link">胡一文{{name}}<i class="el-icon-arrow-down el-icon--right"></i></span>
                 <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item>首页</el-dropdown-item>
                     <el-dropdown-item><a href="https://github.com/291605552?tab=repositories" target="_blank">GitHub</a></el-dropdown-item>
@@ -69,6 +69,6 @@
 <script type="text/javascript" th:src="@{../../lib/element-ui/lib/index.js}"></script>
 <script type="text/javascript" th:src="@{../../lib/vue/vue-resource.js}"></script>
 <script type="text/javascript" th:src="@{../../lib/vue/vuex.min.js}"></script>
-<script type="text/javascript" th:src="@{../../store/store.js}"></script>
+<!--<script type="text/javascript" th:src="@{../../store/store.js}"></script>-->
 <script type="text/javascript" th:src="@{../../js/index.js}"></script>
 </html>

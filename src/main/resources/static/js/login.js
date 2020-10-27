@@ -40,7 +40,7 @@ new Vue({
                         username: this.login.username,
                         password: this.login.password,
                     }).then(result => {
-                        // 判断用户是否登录成功，后端返回JSON格式数据，不然娶不到数据
+                        // 判断用户是否登录成功，后端返回JSON格式数据，不然取不到数据
                         if (result.body.success) {
                             // sessionStorage.setItem("name", this.login.name);
                             // sessionStorage.setItem("token", this.login);

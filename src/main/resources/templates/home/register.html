@@ -13,29 +13,47 @@
     <div id="login">
         <el-main id="main">
             <el-row type="flex" class="row-bg" justify="center">
-                <el-col :span="5">
+                <el-col :span="7">
                     <el-card class="box-card">
                         <div solt="header" class="header">
-                            <span class="item">注册</span>
+                            <span class="item">立即注册</span>
                         </div>
                         <div id="form">
                             <!-- 注册表单 -->
-                            <el-form :model="register" status-icon ref="register">
-                                <el-form-item prop="username"
-                                              :rules="[{ required: true, message: '用户名不能为空'}]">
+                            <el-form :model="register" status-icon ref="register" :rules="rules">
+                                <el-form-item prop="username">
+                                              <!--:rules="[{ required: true,
+                                                         pattern: /^[a-zA-Z0-9_]{6,12}$/,
+                                                         message: '用户名不合法'}]"-->
+
                                     <el-input prefix-icon="el-icon-ump-yonghu" v-model="register.username"
-                                              auto-complete="off"></el-input>
+                                              auto-complete="off" placeholder="只能是6-12位的字母数字"></el-input>
                                 </el-form-item>
-                                <el-form-item prop="password"
-                                              :rules="[{ required: true, message: '密码不能为空'}]">
+                                <el-form-item prop="password">
+                                              <!--:rules="[{ required: true,
+                                                         pattern: /^\w{6,12}$/,
+                                                         message: '密码不能为空'}]"-->
                                     <el-input prefix-icon="el-icon-ump-mima" type="password" v-model="register.password"
-                                              auto-complete="off"></el-input>
+                                              auto-complete="off" placeholder="只能是6-12位的字母数字下划线"></el-input>
                                 </el-form-item>
-                                <el-form-item prop="repassword"
-                                              :rules="[{ required: true, message: '请再次输入密码'}]">
+                                <el-form-item prop="repassword">
+                                              <!--:rules="[{ required: true, message: '请再次输入密码'}]"-->
                                     <el-input prefix-icon="el-icon-ump-anquan" v-model="register.repassword"
                                               @keyup.enter.native="registerEnter('register')"
-                                              auto-complete="off"></el-input>
+                                              auto-complete="off" placeholder="重复密码"></el-input>
+                                </el-form-item>
+                                <el-form-item prop="email" >
+                                    <el-input prefix-icon="el-icon-message"
+                                              v-model="register.email"
+                                              auto-complete="off" placeholder="请输入邮箱">
+                                    <el-button slot="append" type="info" icon="el-icon-message" @click="sendCode('register')" circle></el-button>
+                                    </el-input>
+                                </el-form-item>
+                                <el-form-item prop="code" >
+                                    <el-input v-model="register.code"
+                                              auto-complete="off" placeholder="请输您的邮箱收到的验证码">
+                                        <span slot="append" v-text="timeout"></span>
+                                    </el-input>
                                 </el-form-item>
                                 <el-form-item>
                                     <el-button class="btn" type="primary" @click="submitForm('register')">注册</el-button>
@@ -53,6 +71,7 @@
     </div>
 </div>
 </body>
+<script type="text/javascript" th:src="@{../../lib/vue/axios.min.js}"></script>
 <script type="text/javascript" th:src="@{../../lib/vue/vue.js}"></script>
 <script type="text/javascript" th:src="@{../../lib/element-ui/lib/index.js}"></script>
 <script type="text/javascript" th:src="@{../../lib/vue/vue-resource.js}"></script>

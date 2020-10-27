@@ -15,6 +15,7 @@ new Vue({
         //从vuex中获取用户登录的用户名
         getName(){
             this.name = sessionStorage.getItem("name");
+            console.log(name);
         }
     },
     //声明周期钩子函数-->在data和methods渲染结束后执行
