@@ -1,11 +1,11 @@
-package cn.tycoding.entity;
+package cn.yiwen.entity;
 
 import java.io.Serializable;
 import java.util.List;
 
 /**
- * @auther TyCoding
- * @date 2018/7/29
+ * @auther 胡一文
+ * @date 2020/7/29
  */
 public class PageBean implements Serializable {
 

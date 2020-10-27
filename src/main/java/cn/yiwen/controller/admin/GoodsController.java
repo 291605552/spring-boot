@@ -1,9 +1,9 @@
-package cn.tycoding.controller.admin;
+package cn.yiwen.controller.admin;
 
-import cn.tycoding.entity.Goods;
-import cn.tycoding.entity.PageBean;
-import cn.tycoding.entity.Result;
-import cn.tycoding.service.GoodsService;
+import cn.yiwen.entity.Goods;
+import cn.yiwen.entity.PageBean;
+import cn.yiwen.entity.Result;
+import cn.yiwen.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * @auther TyCoding
- * @date 2018/9/19
+ * @auther 胡一文
+ * @date 2020/9/19
  */
 @RestController
 @RequestMapping("/goods")
@@ -33,8 +33,8 @@ public class GoodsController {
      */
     @RequestMapping("/findByConPage")
     public PageBean findByConPage(Goods goods,
-                                  @RequestParam(value = "pageCode", required = false) int pageCode,
-                                  @RequestParam(value = "pageSize", required = false) int pageSize) {
+                      @RequestParam(value = "pageCode", required = false) int pageCode,
+                      @RequestParam(value = "pageSize", required = false) int pageSize) {
         return goodsService.findByPage(goods, pageCode, pageSize);
     }
 

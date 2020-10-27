@@ -1,7 +1,7 @@
-package cn.tycoding.controller.admin;
+package cn.yiwen.controller.admin;
 
-import cn.tycoding.entity.User;
-import cn.tycoding.service.UserService;
+import cn.yiwen.entity.User;
+import cn.yiwen.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * @auther TyCoding
- * @date 2018/9/29
+ * @auther 胡一文
+ * @date 2020/9/29
  */
 @RestController
 public class UserController {

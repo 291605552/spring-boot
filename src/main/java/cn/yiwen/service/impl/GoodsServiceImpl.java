@@ -1,9 +1,9 @@
-package cn.tycoding.service.impl;
+package cn.yiwen.service.impl;
 
-import cn.tycoding.entity.Goods;
-import cn.tycoding.entity.PageBean;
-import cn.tycoding.mapper.GoodsMapper;
-import cn.tycoding.service.GoodsService;
+import cn.yiwen.entity.Goods;
+import cn.yiwen.entity.PageBean;
+import cn.yiwen.mapper.GoodsMapper;
+import cn.yiwen.service.GoodsService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @auther TyCoding
- * @date 2018/9/19
+ * @auther 胡一文
+ * @date 2020/9/19
  */
 @Service
 public class GoodsServiceImpl implements GoodsService {

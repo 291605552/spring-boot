@@ -70,7 +70,7 @@ public class SendEmail {
         message.setSubject("身份验证", "UTF-8");
 
         // 5. Content: 邮件正文（可以使用html标签）
-        message.setContent("你好,你的验证码是:"+code, "text/html;charset=UTF-8");
+        message.setContent("你好,你的验证码是:"+code+",两分钟内有效", "text/html;charset=UTF-8");
 
         // 6. 设置发件时间
         message.setSentDate(new Date());

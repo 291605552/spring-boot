@@ -1,11 +1,11 @@
-package cn.tycoding.service;
+package cn.yiwen.service;
 
-import cn.tycoding.entity.Goods;
-import cn.tycoding.entity.PageBean;
+import cn.yiwen.entity.Goods;
+import cn.yiwen.entity.PageBean;
 
 /**
- * @auther TyCoding
- * @date 2018/9/19
+ * @auther 胡一文
+ * @date 2020/9/19
  */
 public interface GoodsService extends BaseService<Goods> {
 

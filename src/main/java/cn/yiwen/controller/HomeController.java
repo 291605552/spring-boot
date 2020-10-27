@@ -1,4 +1,4 @@
-package cn.tycoding.controller;
+package cn.yiwen.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 /**
  * 首页控制器
  *
- * @auther TyCoding
- * @date 2018/9/28
+ * @auther 胡一文
+ * @date 2020/9/28
  */
 @Controller
 public class HomeController {

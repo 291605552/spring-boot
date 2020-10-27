@@ -1,11 +1,11 @@
-package cn.tycoding.entity;
+package cn.yiwen.entity;
 
 import java.io.Serializable;
 
 /**
  * 商品表
- * @auther TyCoding
- * @date 2018/9/29
+ * @auther 胡一文
+ * @date 2020/9/29
  */
 public class Goods implements Serializable {
 

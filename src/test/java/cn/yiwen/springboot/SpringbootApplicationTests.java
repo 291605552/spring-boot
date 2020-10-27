@@ -1,4 +1,4 @@
-package cn.tycoding.springboot;
+package cn.yiwen.springboot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

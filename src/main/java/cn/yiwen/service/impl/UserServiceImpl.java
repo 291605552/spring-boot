@@ -1,16 +1,16 @@
-package cn.tycoding.service.impl;
+package cn.yiwen.service.impl;
 
-import cn.tycoding.entity.User;
-import cn.tycoding.mapper.UserMapper;
-import cn.tycoding.service.UserService;
+import cn.yiwen.entity.User;
+import cn.yiwen.mapper.UserMapper;
+import cn.yiwen.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
- * @auther TyCoding
- * @date 2018/9/28
+ * @auther 胡一文
+ * @date 2020/9/28
  */
 @Service
 public class UserServiceImpl implements UserService {

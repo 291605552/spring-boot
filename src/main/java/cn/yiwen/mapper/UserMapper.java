@@ -1,13 +1,13 @@
-package cn.tycoding.mapper;
+package cn.yiwen.mapper;
 
-import cn.tycoding.entity.User;
+import cn.yiwen.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
 /**
- * @auther TyCoding
- * @date 2018/9/28
+ * @auther 胡一文
+ * @date 2020/9/28
  */
 @Mapper
 public interface UserMapper {

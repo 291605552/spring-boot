@@ -1,10 +1,10 @@
-package cn.tycoding.service;
+package cn.yiwen.service;
 
-import cn.tycoding.entity.User;
+import cn.yiwen.entity.User;
 
 /**
- * @auther TyCoding
- * @date 2018/9/28
+ * @auther 胡一文
+ * @date 2020/9/28
  */
 public interface UserService extends BaseService<User> {
 

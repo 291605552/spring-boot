@@ -1,6 +1,6 @@
-package cn.tycoding.interceptor;
+package cn.yiwen.interceptor;
 
-import cn.tycoding.entity.User;
+import cn.yiwen.entity.User;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -14,14 +14,14 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 自定义拦截器，实现简单的登录拦截
  *
- * @auther TyCoding
- * @date 2018/9/29
+ * @auther 胡一文
+ * @date 2020/9/29
  */
 @Component
 @Aspect
 public class MyInterceptor {
 
-    @Pointcut("within (cn.tycoding.controller..*) && !within(cn.tycoding.controller.admin.LoginController)")
+    @Pointcut("within (cn.yiwen.controller..*) && !within(cn.yiwen.controller.admin.LoginController)")
     public void pointCut() {
 
     }
@@ -38,6 +38,7 @@ public class MyInterceptor {
             attributes.getResponse().sendRedirect("/login"); //手动转发到/login映射路径
         }
         System.out.println("-----------用户已登录-----------");
+        System.out.println("当前用户是:"+user.getUsername());
 
         //一定要指定Object返回值，若AOP拦截的Controller return了一个视图地址，那么本来Controller应该跳转到这个视图地址的，但是被AOP拦截了，那么原来Controller仍会执行return，但是视图地址却找不到404了
         //切记一定要调用proceed()方法
