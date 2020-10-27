@@ -2,6 +2,11 @@ server:
   port: 8080
 
 spring:
+  #redis相关
+  redis:
+    port: 6379
+    host: 47.99.96.52
+    timeout: 10000
   datasource:
     name: springboot
     type: com.alibaba.druid.pool.DruidDataSource
@@ -10,7 +15,7 @@ spring:
       #监控统计拦截的filters
       filter: stat
       #mysql驱动
-      driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
       #基本属性
       url: jdbc:mysql://127.0.0.1:3306/ssm?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
       username: root
@@ -56,7 +61,7 @@ spring:
 #mybatis配置
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: cn.tycoding.entity
+  type-aliases-package: cn.yiwen.entity
 
 #mybaatis分页插件pagehelper设置
 pagehelper:
